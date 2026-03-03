@@ -4,12 +4,12 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   
   var requestOptions = {
-    method: 'SET',
+    method: 'GET',
     redirect: 'follow'
   };
 
-  fetch("http://localhost:3000/post", requestOptions)
-    .then(response => response.text())
+  fetch("https://effective-space-barnacle-wr567wg7q6px296p6-3000.app.github.dev/posts", requestOptions)
+    .then(response => response.json())
     .then (result => console.log(result))
     .catch(error => console.log('error', error));
 
